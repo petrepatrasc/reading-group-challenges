@@ -4,6 +4,7 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  app.ignore_controller.listener:
+    class: AppBundle\Listener\IgnoreControllerListener
+    tags:
+      - { name: kernel.event_listener, event: kernel.controller, method: onKernelController, priority: 100 }
