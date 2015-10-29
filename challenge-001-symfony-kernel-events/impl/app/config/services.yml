@@ -18,3 +18,8 @@ services:
     class: AppBundle\Subscriber\ApiResponseSubscriber
     tags:
       - { name: kernel.event_subscriber }
+
+  app.ignored_output.subscriber:
+    class: AppBundle\Subscriber\IgnoredOutputSubscriber
+    tags:
+      - { name: kernel.event_subscriber }
