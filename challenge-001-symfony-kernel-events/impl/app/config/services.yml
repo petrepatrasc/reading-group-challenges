@@ -8,3 +8,13 @@ services:
     class: AppBundle\Listener\IgnoreControllerListener
     tags:
       - { name: kernel.event_listener, event: kernel.controller, method: onKernelController, priority: 100 }
+
+  app.header_attacher.listener:
+    class: AppBundle\Listener\HeaderAttacherListener
+    tags:
+      - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: 100 }
+
+  app.api_response.subscriber:
+    class: AppBundle\Subscriber\ApiResponseSubscriber
+    tags:
+      - { name: kernel.event_subscriber }
