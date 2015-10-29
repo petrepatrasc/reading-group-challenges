@@ -23,3 +23,8 @@ services:
     class: AppBundle\Subscriber\IgnoredOutputSubscriber
     tags:
       - { name: kernel.event_subscriber }
+
+  app.logic_exception.listener:
+    class: AppBundle\Listener\LogicExceptionListener
+    tags:
+      - { name: kernel.event_listener, event: kernel.exception, method: onKernelException, priority: 200 }
