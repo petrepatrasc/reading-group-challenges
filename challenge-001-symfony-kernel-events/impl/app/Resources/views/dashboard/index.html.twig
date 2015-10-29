@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Dashboard</h1>
+    <p>So let's checkout the output from some of the other controllers :D</p>
+
+    <table>
+        <tr>
+            <th>Api Controller</th>
+            <td>{{ render(path('app.api.product')) }}</td>
+        </tr>
+
+        <tr>
+            <th>Regular Controller</th>
+            <td>{{ render(path('app.regular.index')) }}</td>
+        </tr>
+
+        <tr>
+            <th>Cathable Controller</th>
+            <td>{{ render(path('app.catchable.index')) }}</td>
+        </tr>
+
+        <tr>
+            <th>Exception Controller</th>
+            <td>Funny story, Exceptions get bubbled back into the original controller.</td>
+        </tr>
+
+        <tr>
+            <th>Ignored Output Controller</th>
+            <td>{{ render(path('app.ignored.index')) }}</td>
+        </tr>
+    </table>
+{% endblock %}
