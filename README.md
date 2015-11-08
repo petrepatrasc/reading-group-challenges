@@ -13,4 +13,15 @@ The rules are simple:
 
 If you want to have a look at the solutions developed by the rest of the team, simply have a look at the forks on this GitHub repository.
 
+## Updating your forked repository
+
+In order to update the forked repository, first make sure to define the upstream remote. You only need to do this once:
+
+    git remote add upstream https://github.com/cegekaro/reading-group-challenges
+
+Then whenever you need to update your own fork with the latest changes, simple run the following commands on the local `master` branch:
+
+    git pull --rebase upstream master
+    git push -f
+
 Good luck!
