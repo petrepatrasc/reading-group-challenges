@@ -19,7 +19,7 @@ In order to update the forked repository, first make sure to define the upstream
 
     git remote add upstream https://github.com/cegekaro/reading-group-challenges
 
-Then whenever you need to update your own fork with the latest changes, simple run the following commands on the local `master` branch:
+Then whenever you need to update your own fork with the latest changes, simply run the following commands on the local `master` branch:
 
     git pull --rebase upstream master
     git push -f
